@@ -1,0 +1,254 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0d0c0c;
+}
+
+nav {
+    background-color: #333;
+    color: #fff;
+    padding: 7px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo a {
+    color: #fff;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    padding: 8px 15px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #eb1313;
+    border-radius: 5px;
+}
+#home-1{
+    background: url('../img/vr.jpeg');
+    height: 700px;
+    background-size: cover;
+    top: 40%;
+}
+#gallery-1{
+    background: url('../img/gallery11.jpeg');
+    height: 700px;
+    background-size: cover;
+}
+#services-1{
+    background: url('../img/serve1.png');
+    height: 700px;
+    background-size: cover;
+}
+#about-1{
+    background: url('../img/about1.jpg');
+    height: 700px;
+    background-size: cover
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger span {
+    height: 3px;
+    width: 25px;
+    background: #fff;
+    margin: 4px 0;
+    transition: all 0.3s ease;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        flex-direction: column;
+        background-color: #fcf4f4;
+        width: 100%;
+        text-align: center;
+        transition: left 0.3s ease;
+
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-toggle:checked + .nav-links {
+        left: 0;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+
+section {
+    padding: 50px 20px;
+    text-align: center;
+    
+}
+
+.default {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 70px;
+
+}
+
+.first {
+    background-color: #e2e2e2;
+}
+
+#home-1 h1 {
+    margin-bottom: 0px;
+    font-size: 32px;
+    display: grid;
+    color: rgb(6, 6, 6);
+    margin-top: 300px;
+}
+#gallery-1 h1 {
+    margin-bottom: 0px;
+    font-size: 32px;
+    display: grid;
+    color: rgb(6, 6, 6);
+    margin-top: 90px;
+    
+}
+#gallery-1 p {
+    margin-bottom: 0px;
+    font-size: 15px;
+    display: grid;
+    color: rgb(6, 6, 6);
+    
+}
+#services-1 h1{
+    margin-left: 600px;
+    margin-top: 100px;
+
+}
+#services-1 p{
+    margin-left: 600px;
+    color: black;
+}
+#about-1 h1{
+    color: white;
+    margin-top: 60px;
+}
+
+p {
+    font-size: 18px;
+    color: #fdfbfb;
+}
+.about-us {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    text-align: left;
+}
+
+.about-us h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color: #f8f4f4;
+    text-align: center;
+}
+
+.about-us p {
+    font-size: 18px;
+    color: #f5f4f4;
+    margin-bottom: 30px;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-image {
+    flex: 1;
+    max-width: 40%;
+    margin-right: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-text {
+    flex: 2;
+    max-width: 60%;
+}
+
+.about-text h2 {
+    font-size: 28px;
+    color: #f9f8f8;
+    margin-bottom: 30px;
+    margin-right: 200px;
+    margin-top: 100px;
+
+
+}
+
+.about-text p {
+    font-size: 16px;
+    color: #fcf8f8;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    margin-right: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .about-content {
+        flex-direction: column;
+    }
+
+    .about-image, .about-text {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    .about-image {
+        margin-bottom: 20px;
+    }
+}
